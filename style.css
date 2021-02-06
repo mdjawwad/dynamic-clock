@@ -112,10 +112,12 @@ button{
     border-radius: 12px;
     border: 1px solid white;
     cursor: pointer;
+    outline: none;
 }
 button:hover{
     background-color: white;
     color: black;
+    outline: none;
 }
 .social{
     width: 80%;
@@ -124,7 +126,9 @@ button:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin: 0 !important;
+    margin-top: 30px !important;
+
     
 }
 
@@ -141,4 +145,73 @@ h6{
     margin-left: 10px;
     margin-right: 10px;
 
+}
+
+
+
+@media only screen and (min-width:200px) and (max-width : 500px){
+body{
+  width: 100% !important;
+display: flex;
+flex-direction: column;
+margin: 0 !important;
+background-position: center;
+background-size: cover;
+}
+.clock{
+margin: 0 !important;
+width: 150px;
+height: 150px;
+
+}
+.info{
+  width: 80% !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+h1{
+  font-size: 25px;
+}
+p{
+  font-size: 8px;
+  width: 100% !important;
+}
+button{
+  width: 70px;
+  height: 25px;
+  font-size: 9px !important;
+}
+.social h6{
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0 !important;
+}
+.icon{
+  margin-top: 8px;
+}
+.icon a img{
+width: 14px;
+margin: 0 !important;
+margin: 0 5px 0 5px !important;
+}
+.number{
+  font-size: 15px !important;
+}
+.clock .hand.second {
+  width: .5px;
+  height: 40%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 2px;
+  height: 37%;
+  background-color:white;
+}
+
+.clock .hand.hour {
+  width: 4px;
+  height:28%;
+  background-color: white;
+}
 }
