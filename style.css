@@ -1,0 +1,119 @@
+  
+
+body {
+background-image: url('guillermo-ferla-Oze6U2m1oYU-unsplash.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+  display: flex;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color:red;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .hand.second {
+  width: 1px;
+  height: 40%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 4px;
+  height: 37%;
+  background-color:white;
+}
+
+.clock .hand.hour {
+  width: 7px;
+  height:28%;
+  background-color: white;
+}
+.info{
+    width: 50%;
+    color: white;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p{
+    font-size: 12px;
+    width: 90%;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
